@@ -1,0 +1,97 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  margin: auto auto;
+  height: 100vh;
+  width: 1000px;
+}
+
+header {
+  background-color: #dedede;
+}
+
+header h1 {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  background-color: antiquewhite;
+  padding-top: 35px;
+}
+
+.form {
+  width: 70%;
+  margin-bottom: 20px;
+}
+
+.form .form-group {
+  padding: 20px;
+}
+
+.form .form-group input {
+  width: 100%;
+  height: 25px;
+  font-weight: 900;
+}
+
+.form .form-group label {
+  display: block;
+  padding-bottom: 10px;
+  font-weight: 900;
+}
+
+.form button {
+  border: none;
+  background-color: tomato;
+  width: 40%;
+  height: 25px;
+  border-radius: 10px;
+  color: #fff;
+}
+
+.form button:hover {
+  background-color: thistle;
+}
+
+.change-button {
+  width: 10%;
+}
+
+.change-button .btn {
+  display: block;
+  border-radius: 50%;
+  border: none;
+  background-color: rgb(170, 147, 13);
+  color: #fff;
+  cursor: pointer;
+  width: 80%;
+  height: 50px;
+}
+
+.change-button .btn:hover {
+  background-color: yellowgreen;
+}
+
+.list {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  width: 20%;
+  background-color: thistle;
+}
+
+.list p {
+  padding-top: 20px;
+}
