@@ -1,4 +1,9 @@
 const checkAnswerButton = document.getElementById("check-answer-btn");
+const submitAnswerButton = document.getElementById("submit-answer-btn");
+const changeButton = document.getElementById("change-btn");
+const submitForm = document.getElementById("submit-form");
+const quizForm = document.getElementById("quiz-form");
+const displayQuizForm = document.getElementById("quiz-form").style.display;
 
 const wordArray = [
   { Question: "Aap", Answer: "Monkey" },
@@ -32,5 +37,15 @@ checkAnswerButton.addEventListener("click", () => {
   } else {
     alert("not correct");
     console.log("incorrect");
+  }
+});
+
+changeButton.addEventListener("click", () => {
+  if (quizForm.classList.contains("no-display")) {
+    quizForm.classList.remove("no-display");
+    submitForm.classList.add("no-display");
+  } else {
+    quizForm.classList.add("no-display");
+    submitForm.classList.remove("no-display");
   }
 });
