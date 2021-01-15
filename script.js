@@ -1,15 +1,16 @@
 const checkAnswerButton = document.getElementById("check-answer-btn");
-const submitAnswerButton = document.getElementById("submit-answer-btn");
+const submitEntryButton = document.getElementById("submit-entry-btn");
 const changeButton = document.getElementById("change-btn");
 const submitForm = document.getElementById("submit-form");
 const quizForm = document.getElementById("quiz-form");
 const displayQuizForm = document.getElementById("quiz-form").style.display;
+const list = document.getElementById("list");
 
 const wordArray = [
-  { Question: "Aap", Answer: "Monkey" },
-  { Question: "Noot", Answer: "Nut" },
-  { Question: "Molen", Answer: "Mill" },
-  { Question: "Boom", Answer: "Tree" },
+  { question: "Aap", answer: "Monkey" },
+  { question: "Noot", answer: "Nut" },
+  { question: "Molen", answer: "Mill" },
+  { question: "Boom", answer: "Tree" },
 ];
 
 let answer = getRandomWord();
@@ -19,10 +20,10 @@ let answer = getRandomWord();
 
 function getRandomWord() {
   let randomNumber = Math.floor(Math.random() * wordArray.length);
-  let randomWordFromArray = wordArray[randomNumber].Question;
+  let randomWordFromArray = wordArray[randomNumber].question;
   // wordArray[Math.floor(Math.random() * wordArray.length)].Question;
   document.getElementById("question-field").value = randomWordFromArray;
-  return wordArray[randomNumber].Answer;
+  return wordArray[randomNumber].answer;
 }
 
 checkAnswerButton.addEventListener("click", () => {
@@ -49,3 +50,32 @@ changeButton.addEventListener("click", () => {
     submitForm.classList.remove("no-display");
   }
 });
+
+submitEntryButton.addEventListener("click", submitEntry);
+
+function submitEntry(e) {
+  e.preventDefault();
+
+  const questionField = document.getElementById("submit-question-field").value;
+  const answerField = document.getElementById("submit-answer-field").value;
+
+  if (answerField === "" || questionField === "") {
+    alert("enter question and answer");
+  } else {
+    const entry = {
+      question: questionField,
+      answer: answerField,
+    };
+    wordArray.push(entry);
+    addEntryToDOM(entry);
+  }
+}
+
+function addEntryToDOM(entry) {
+  const newEntry = document.createElement("p");
+
+  newEntry.innerHTML = entry.question;
+
+  console.log(list);
+  list.appendChild(newEntry);
+}
