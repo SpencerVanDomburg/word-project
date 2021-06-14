@@ -1,0 +1,184 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap");
+
+:root {
+  --Green: #028a0f;
+  --White: #fafafa;
+  --Font-Do-Hyeon: "Do Hyeon", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto Condensed", sans-serif;
+  /* background-color: #03ac13; */
+  background-image: linear-gradient(#03ac13, #191919);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  width: 900px;
+  height: 550px;
+  /* background-color: var(--Green); */
+  background-image: linear-gradient(#03ac13, #191919);
+  border-radius: 10px;
+  border: 2px solid var(--White);
+}
+/* Main Styling */
+.main {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  background-color: var(--White);
+  border-radius: 10px;
+  border: 2px solid var(--White);
+  height: 440px;
+  margin: 0px 10px 10px 10px;
+  padding: 10px;
+}
+
+.header {
+  letter-spacing: 10px;
+  font-size: 30px;
+  font-family: var(--Font-Do-Hyeon);
+  text-align: center;
+  color: var(--White);
+  padding: 10px 0px;
+  width: 900px;
+}
+/* Form Styling */
+#quiz-form {
+  background-color: var(--White);
+  border-radius: 10px;
+  padding: 10px;
+  border: 5px solid var(--Green);
+  height: 250px;
+  width: 550px;
+}
+
+#submit-form {
+  background-color: var(--White);
+  border-radius: 10px;
+  padding: 10px;
+  border: 5px solid var(--Green);
+  height: 250px;
+  width: 550px;
+}
+
+.field-style {
+  width: 90%;
+  border-color: var(--Green);
+  border-radius: 5px;
+}
+
+.form-text {
+  color: #028a0f;
+  font-size: 25px;
+  letter-spacing: 5px;
+  font-family: var(--Font-Do-Hyeon);
+  margin-top: 15px;
+}
+
+.form-group input {
+  width: 90%;
+  height: 35px;
+  font-weight: 900;
+  text-align: center;
+}
+
+.form-group label {
+  display: flex;
+  padding-bottom: 5px;
+  margin-left: 28px;
+  font-weight: 900;
+}
+
+/* Button Styling */
+button {
+  border: 2px solid var(--Green);
+  background-color: var(--White);
+  width: 40%;
+  height: 35px;
+  border-radius: 15px;
+  color: var(--Green);
+  font-family: var(--Font-Do-Hyeon);
+  font-size: 15px;
+  letter-spacing: 4px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+#check-answer-btn {
+  margin-top: 12px;
+}
+
+#submit-entry-btn {
+  margin-top: 12px;
+}
+
+button:hover {
+  background-color: var(--Green);
+  color: var(--White);
+}
+
+.change-button {
+  width: 10%;
+}
+
+.change-button .btn {
+  display: block;
+  border-radius: 10px;
+  border: 2px solid var(--Green);
+  color: var(--Green);
+  background-color: var(--White);
+  cursor: pointer;
+  width: 80px;
+  height: 40px;
+  margin-left: 10px;
+}
+
+.change-button .btn:hover {
+  background-color: var(--Green);
+  color: var(--White);
+  transition: 0.5s;
+}
+/* List Styling */
+.list {
+  margin-left: 15px;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  width: 250px;
+  background-color: var(--White);
+  border-radius: 10px;
+  padding: 15px;
+  border: 5px solid var(--Green);
+  color: var(--Green);
+}
+
+.list p {
+  padding-top: 10px;
+  border-bottom: 1px solid var(--Green);
+  border-bottom-style: dotted;
+  color: black;
+  font-style: italic;
+}
+
+.list h2 {
+  letter-spacing: 4px;
+  font-family: var(--Font-Do-Hyeon);
+  border-bottom: 2px solid var(--Green);
+}
+
+.no-display {
+  display: none;
+}

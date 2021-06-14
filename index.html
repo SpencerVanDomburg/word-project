@@ -4,44 +4,49 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
     integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
-  <link rel="stylesheet" href="style.css">
+
+  <link rel="stylesheet" href="CSS/style.css">
+
+  <!-- <link rel="stylesheet" href="style.css"> -->
+
   <title>Word Project</title>
 </head>
 
 <body>
   <div class="container">
-    <header class="header">
+    <div class="header">
       <h1>Word Project</h1>
-    </header>
-
-    <div class="main" id="main">
+    </div>
+    <div class="main">
       <div class="form" id="form">
         <form id="quiz-form">
           <div class="form-group">
-            <label for="Question">Question</label>
-            <input type="text" id="question-field" readonly />
+            <label class="form-text" for="Question">Question:</label>
+            <input type="text" class="field-style" id="question-field" " readonly />
           </div>
-          <div class="form-group">
-            <label for="Answer">Answer</label>
-            <input type="text" id="answer-field" />
+          <div class=" form-group">
+            <label class="form-text" for="Answer">Answer:</label>
+            <input type="text" class="field-style" id="answer-field" placeholder="Type your answer here..." />
           </div>
-          <button type="submit" class="btn" id="check-answer-btn">Check Answer</button>
+          <button type=" submit" class="btn" id="check-answer-btn">CHECK ANSWER</button>
+
         </form>
 
         <form id="submit-form" class="no-display">
           <div class="form-group">
-            <label for="Question">Question</label>
-            <input type="text" id="submit-question-field" />
+            <label class="form-text" for="Question">Question:</label>
+            <input type="text" class="field-style" id="submit-question-field"
+              placeholder="Type your question here..." />
           </div>
           <div class="form-group">
-            <label for="Answer">Answer</label>
-            <input type="text" id="submit-answer-field" />
+            <label class="form-text" for="Answer">Answer:</label>
+            <input type="text" class="field-style" id="submit-answer-field" placeholder="Type your answer here..." />
           </div>
-          <button type="submit" class="btn" id="submit-entry-btn">Submit Entry</button>
+          <button type="submit" class="btn" id="submit-entry-btn">SUBMIT ENTRY</button>
         </form>
-
       </div>
       <div class="change-button" id="change-btn">
         <button type="submit" class="btn"><i class="fas fa-exchange-alt fa-2x"></i></button>
